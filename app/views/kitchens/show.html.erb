@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @kitchen.name %>
+</p>
+
+<p><b>Recipes</b></p>
+<ul>
+   <%@kitchen.recipes.each do |s|%>
+    <li><%=link_to(s.name, recipe_path(s))%></li>
+   <%end%>
+</ul>
+	
+
+
+
+
+<%= link_to 'Edit', edit_kitchen_path(@kitchen) %> |
+<%= link_to 'Back', kitchens_path %>

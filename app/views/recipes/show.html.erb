@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <b>Steps:</b>
+  <%= @recipe.steps %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= image_tag @recipe.photo %>
+</p>
+
+<p>
+  <b>Serves:</b>
+  <%= @recipe.serves %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @recipe.rating %>
+</p>
+
+<p><b>Kitchen:</b> <%= @recipe.kitchen ? @recipe.kitchen.name : 'not selected' %></b></p>
+
+
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>
